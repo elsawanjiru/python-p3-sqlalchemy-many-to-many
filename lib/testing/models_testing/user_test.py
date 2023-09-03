@@ -2,12 +2,12 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
 from conftest import SQLITE_URL
-from models import User, Game, Review
+from lib.models import User, Review
 
 class TestUser:
     '''User in models.py'''
 
-    def test_has_attributes(self):
+    def test_has_attributes():
         '''has attributes id, name, created_at, updated_at, reviews, and games.'''
         
         engine = create_engine(SQLITE_URL)
